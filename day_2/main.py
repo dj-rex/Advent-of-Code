@@ -21,8 +21,7 @@ def part_1_line_possible(
 
 def part_2(input_line: str) -> int:
     """Return the ID if game possible"""
-    game, result = input_line.split(":")
-    game_id = int(game.replace("Game ", ""))
+    result = input_line.split(":")[1]
     results = [_.strip() for _ in result.split(";")]
     req_green = 0
     req_blue = 0
