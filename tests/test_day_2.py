@@ -19,6 +19,7 @@ def test_part_1_enforces_limit():
 
 
 def test_part_2():
+    """Test part 2"""
     line = "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green"
     assert part_2(line) == 48
     line = "Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue"
