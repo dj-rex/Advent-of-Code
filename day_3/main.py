@@ -1,4 +1,4 @@
-""" Day Two of Advent of Code 2023"""
+""" Day Three of Advent of Code 2023"""
 from math import prod
 
 
