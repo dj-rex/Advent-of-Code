@@ -1,5 +1,5 @@
 """ Test Day 1 """
-from day_1 import part_1_parser, part_2_parser
+from aoc_2023.day_1 import part_1_parser, part_2_parser
 
 
 def test_part_1():

@@ -1,5 +1,5 @@
 """ Test Day 2 """
-from day_2 import part_1_line_possible, part_2
+from aoc_2023.day_2 import part_1_line_possible, part_2
 
 
 def test_part_1_returns_id():
