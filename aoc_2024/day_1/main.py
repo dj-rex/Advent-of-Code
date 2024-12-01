@@ -18,7 +18,7 @@ for line in input_data.split("\n"):
 
 # Part 1
 def calc_list_diff(l1, l2) -> int:
-    """Calculate the difference in two lists of numbers when both in ascending order"""
+    """Calculate the sum of the difference in two lists of numbers when both in ascending order"""
     return sum([abs(val_1 - val_2) for val_1, val_2 in zip (sorted(l1), sorted(l2))])
 
 assert calc_list_diff(test_list_a, test_list_b) == 11
@@ -27,7 +27,7 @@ print(f"Part 1: {calc_list_diff(list_a, list_b)}")
 
 #Part 2
 def similarity_score(l1, l2) -> int:
-    """Calculate the difference in two lists of numbers when both in ascending order"""
+    """Calculate the sum of the product of the numbers in the first list by the times they appear in the second list"""
     c = Counter(l2)
     return sum([i*c[i] for i in l1])
 
