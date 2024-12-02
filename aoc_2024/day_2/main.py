@@ -13,9 +13,9 @@ def is_safe(vals: list) -> bool:
     diffs = [-(int(vals[i]) - int(vals[i+1])) for i in range(len(vals) - 1)]
     if not all([_ > 0 for _ in diffs]) and not all([_ < 0 for _ in diffs]):
         return False
-    if max([max(diffs), abs(min(diffs))]) <= 3:
-        return True
-    return False
+    if max([max(diffs), abs(min(diffs))]) > 3:
+        return False
+    return True
 
 
 assert is_safe([7, 6, 4, 2, 1]) is True
