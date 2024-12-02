@@ -17,7 +17,6 @@ def is_safe(vals: list) -> bool:
         return False
     return True
 
-
 assert is_safe([7, 6, 4, 2, 1]) is True
 assert is_safe([1, 2, 7, 8, 9]) is False
 assert is_safe([9, 7, 6, 2, 1]) is False
