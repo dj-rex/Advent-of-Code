@@ -5,6 +5,7 @@ with open("aoc_2024/day_4/puzzle_input", encoding="utf-8") as f:
 
 # Part 1 (Disgusting code - I know)
 def gen_diagonals1(rs:list) -> list:
+    " Get the diagonals from a list of strings"
     ds = []
     x_lim = len(rs[0])
     y_lim = len(rs)
@@ -32,6 +33,7 @@ def gen_diagonals1(rs:list) -> list:
     return ds
 
 def gen_diagonals2(rs:list) -> list:
+    """ Get the other diagonals from a list of strings"""
     ds = []
     x_lim = len(rs[0])
     y_lim = len(rs)
@@ -59,6 +61,7 @@ def gen_diagonals2(rs:list) -> list:
     return ds
 
 def xmas_hunter(data: str) -> int:
+    """ Find all the XMAS's in a list of strings - like a wordsearch"""
     rows = data.split("\n")
     cols = ["".join([row[i] for row in rows]) for i in range(len(rows))]
     diag1 = gen_diagonals1(rows)
@@ -76,7 +79,7 @@ print(f"Part 1: {xmas_hunter(input_data)}")
 
 # Part 2
 def mas_hunter(data: str) -> int:
-    """ Decorrupt data after a do() command, ignoring data after a don't() command """
+    """ Find all the MAS X's in the input """
     rows = data.split("\n")
     total = 0
     for i in range(len(rows) - 2):
