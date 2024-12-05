@@ -37,7 +37,6 @@ def gen_diagonals2(rs:list) -> list:
     ds = []
     x_lim = len(rs[0])
     y_lim = len(rs)
-    len_lim = max([x_lim, y_lim])
     for y in range(y_lim):
         d = rs[y][x_lim - 1]
         x=x_lim - 1
