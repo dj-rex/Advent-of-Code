@@ -10,8 +10,6 @@ with open("aoc_2024/day_6/test_input", encoding="utf-8") as f:
 def next_pos(rows:list, old_pos:str, old_dir:str) -> str:
     """ Find the next position based on current position and direction """
     x, y = old_pos.split(",")
-    if x == "8" and y == "6":
-        pass
     if old_dir == "up":
         if int(y) == 0:
             return "end;"
