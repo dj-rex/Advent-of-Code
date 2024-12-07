@@ -27,13 +27,13 @@ def solve_equation(vals:list, result:int, inc_bar:bool = False) -> int:
             return total
     return 0
 
-def sum_of_solutions(data: str) -> int:
+def sum_of_solutions(data: str, inc_bar:bool = False) -> int:
     """ Calculate the sum of the solutions to the equations """
     solution_count = 0
     for equation in list(data.split("\n")):
         res, val_str = equation.split(":")
         vals = [int(_) for _ in val_str.strip().split(" ")]
-        solution_count += solve_equation(vals, res)
+        solution_count += solve_equation(vals, res, inc_bar=inc_bar)
     return solution_count
 
 assert sum_of_solutions(test_data) == 3749
@@ -41,15 +41,6 @@ assert sum_of_solutions(test_data) == 3749
 print(f"Part 1: {sum_of_solutions(input_data)}")
 
 # Part 2
-def sum_of_solutions_with_new_operand(data: str) -> int:
-    """ Calculate the sum of the solutions to the equations including a bar operator """
-    solution_count = 0
-    for i, equation in enumerate(list(data.split("\n"))):
-        res, val_str = equation.split(":")
-        vals = [int(_) for _ in val_str.strip().split(" ")]
-        solution_count += solve_equation(vals, res, True)
-    return solution_count
+assert sum_of_solutions(test_data, inc_bar=True) == 11387
 
-assert sum_of_solutions_with_new_operand(test_data) == 11387
-
-print(f"Part 2: {sum_of_solutions_with_new_operand(input_data)}")
+print(f"Part 2: {sum_of_solutions(input_data, inc_bar=True)}")
