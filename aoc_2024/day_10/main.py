@@ -1,8 +1,8 @@
 """ Day 10 of Advent of Code 2024"""
-with open("aoc_2024/day_10/puzzle_input", encoding="utf-8") as f:
+with open("puzzle_input", encoding="utf-8") as f:
     input_data = f.read().strip()
 
-with open("aoc_2024/day_10/test_input", encoding="utf-8") as f:
+with open("test_input", encoding="utf-8") as f:
     test_data = f.read().strip()
 
 def path_hunter(rows: list, i: int, j: int) -> list:
