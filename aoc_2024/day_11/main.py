@@ -42,8 +42,8 @@ def calculate_stones(data: str, blinks: int) -> int:
     with Pool(len(starting_stones)) as p:
         stones = sum(p.map(partial(calc_stone, blinks=blinks), starting_stones))
     return stones
-        
-if __name__ == '__main__':  
+
+if __name__ == '__main__':
     # Part 1
     assert calculate_stones(test_data, blinks = 6) == 22
     assert calculate_stones(test_data, blinks = 25) == 55312
